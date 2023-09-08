@@ -1,0 +1,66 @@
+body{
+    margin: 10px;
+    
+}
+.housing{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.list{
+    width:100%;
+    height: calc(100vh - 160px);
+    overflow-y: scroll;
+    border: 3px solid #0F9D58;
+}
+.leftSide{
+    padding: 30px;
+}
+.chart{
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen 
+   and (max-width : 700px) {
+    .housing{
+        grid-template-columns: 1fr;
+    }
+    
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    border: 8px solid transparent;
+    border-top: 8px solid #4285F4; /* GDSC Blue */
+    border-right: 8px solid #0F9D58; /* GDSC Green */
+    border-bottom: 8px solid #F4B400; /* GDSC Yellow */
+    border-left: 8px solid #DB4437; /* GDSC Red */
+    border-radius: 30%;
+    animation: spin 2s linear infinite;
+}
+
+.cloud-icon {
+    font-size: 48px;
+    color: #fff;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
